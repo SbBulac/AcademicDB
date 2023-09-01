@@ -3,7 +3,7 @@ Es un proyecto sobre una base de datos de una "academia" en la que hay estudiant
 
 # Diagrama ER
 
-![DiagramaER](./AcademicDB_DiagramaER.png)
+![DiagramaER](./AcademicDB_DiagramaERv2.png)
 
 # SQL
 En el archivo *AcademicDB.sql* encontraremos todo el código necesario para crear la base de datos, las tablas y las columnas.
