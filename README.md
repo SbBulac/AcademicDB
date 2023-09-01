@@ -1,6 +1,10 @@
 # Academic DB
 Es un proyecto sobre una base de datos de una "academia" en la que hay estudiantes, profesores y clases.
 
+# Diagrama ER
+
+![DiagramaER](./AcademicDB_DiagramaER.png)
+
 # SQL
 En el archivo *AcademicDB.sql* encontraremos todo el código necesario para crear la base de datos, las tablas y las columnas.
 
