@@ -11,7 +11,7 @@ echo "A cual tabla deseas agregar informacion?"
 
 echo -e "\n1. Estudiante\n2. Profesor\n3. Clases\n4. Exit"
 read MAIN_MENU_SELECTION
-
+# Case para decidir con que tabla se va a interactuar
 case $MAIN_MENU_SELECTION in
   1) INSERT_ESTUDIANTE ;;
   2) INSERT_PROFESOR ;;
@@ -23,20 +23,24 @@ esac
 }
 
 INSERT_ESTUDIANTE(){
+  # Una funcion que ejecuta INSERT_TABLE() y le pasa por parametros la tabla que se va a editar (estudiante)
   INSERT_TABLE "estudiante"
 }
 INSERT_PROFESOR(){
+  # Una funcion que ejecuta INSERT_TABLE() y le pasa por parametros la tabla que se va a editar (profesor)
   INSERT_TABLE "profesor"
 }
 INSERT_CLASES(){
+  # Una funcion que ejecuta INSERT_TABLE() y le pasa por parametros la tabla que se va a editar (clase)
   INSERT_TABLE "clase"
 }
 
 INSERT_TABLE(){
+    # Se almacena en una variable el valor de la tabla que vamos a editar 
     TABLE_NAME=$1
 
     INSERT_DATA(){
-
+      # Un if que evalua cual es la tabla con la que estamos interactuando y ejecuta el código correspondiente a la tabla
       if [ $TABLE_NAME == "estudiante" ]; then
         echo -e "\nEn esta tabla tienes que diligenciar la siguiente informacion: "
         echo -e "\nnombre\nedad\ndireccion (opcional)\ncelular"
@@ -99,7 +103,7 @@ INSERT_TABLE(){
 
     echo -e "\nSeleccionaste la tabla: $1"
     INSERT_DATA
-    
+    # Se ejecuta la funcion INSERT_DATA() en la cual se ejecuta el código correspondiente a la tabla
 }
 
 EXIT(){
